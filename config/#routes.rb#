@@ -1,11 +1,8 @@
 LeagueOfSoma::Application.routes.draw do
-  resources :members
-
   root to: "league#main"
-#  root to: "members#index"
 
-  #match "/" => 'members#index', method: :post, :as => :members
- # match "members/new" => 'members#new', :as => :new_members
+  match "league" => 'league#create', method: :post
+  match "league/new" => 'league#new'
 
   # The priority is based upon order of creation:
   # first created -> highest priority.

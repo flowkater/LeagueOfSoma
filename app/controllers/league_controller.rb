@@ -1,6 +1,5 @@
 class LeagueController < ApplicationController
   def main
-  	@members = Member.all
-  	
+    @members = Member.all
   end
 end
