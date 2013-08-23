@@ -12,4 +12,8 @@
 //
 //= require jquery
 //= require jquery_ujs
-//= require_tree .
+//= require twitter/bootstrap
+//= require lib/underscore
+//= require lib/backbone
+//= require lib/app
+

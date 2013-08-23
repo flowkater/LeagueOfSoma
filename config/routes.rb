@@ -7,6 +7,20 @@ LeagueOfSoma::Application.routes.draw do
   #match "/" => 'members#index', method: :post, :as => :members
  # match "members/new" => 'members#new', :as => :new_members
 
+  match "/start", to: "league#start", via: :post
+  match "/select16", to: "league#select16", via: :get
+  match "/select8", to: "league#select8", via: :get
+  match "/select4", to: "league#select4", via: :get
+  match "/select2", to: "league#select2", via: :get
+  match "/select1", to: "league#select1", via: :get
+
+  match "/end", to: "league#end", via: :get
+
+  match "/rank", to: "league#rank", via: :get
+  match "/about", to: "league#about", via: :get
+  match "/root_start", to: "league#root", via: :get
+
+
   # The priority is based upon order of creation:
   # first created -> highest priority.
 

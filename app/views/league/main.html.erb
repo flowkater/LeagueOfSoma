@@ -1,0 +1,32 @@
+<div id="wrap">
+  <div class="container">
+    <div class="container-fluid">
+    <div class="row-fluid">
+        <div class="span12">
+            <div class="page-header">
+                <h1>
+                    이번주의 주제는? <small><%= @subject.name %></small>
+                </h1>
+            </div>
+        </div>
+    </div>
+    <div class="row-fluid">
+        <div class="span2">
+        </div>
+        <div class="span4">
+            <%= image_tag 'main.jpg' %>
+        </div>
+        <div class="span2">
+        </div>
+    </div>
+    <div class="start-btn">
+	    <% if @match == 0 %>
+			<%= link_to '시작해요!',start_path, method: :post, class: "btn btn-primary btn-large" %>
+		<% end %>
+	<div>
+    </div>
+  </div> <!-- /container -->
+</div> 
+
+
+
