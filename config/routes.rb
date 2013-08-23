@@ -11,6 +11,7 @@ LeagueOfSoma::Application.routes.draw do
   match "/end", to: "league#end", via: :get
 
   match "/rank", to: "league#rank", via: :get
+  match "/root_start", to: "league#root", via: :get
 
 
   # The priority is based upon order of creation:

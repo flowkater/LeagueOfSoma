@@ -1,0 +1,109 @@
+<div id="wrap">
+  <div class="container">
+    <div class="container-fluid">
+    <div class="row-fluid">
+        <div class="span12">
+            <div class="page-header">
+                <h1>
+                    <%= @subject.name %>
+                </h1>
+            </div>
+        </div>
+    </div>
+    <div class="row-fluid">
+    	<% if @match == 16 %>
+    		<h1>32강</h1>
+	    	<div class="span2">
+	        </div>
+	        <div class="span4">
+	        	<%= link_to select16_path(select: @first, unselect: @second) do %>
+	        		<img alt="140x140" src="src/1.jpg">	
+	        		<p><%= @first.name %></p>
+	        	<% end %>
+	        </div>
+	        <div class="span4">
+	            <%= link_to select16_path(select: @second, unselect: @first) do %>
+	        		<img alt="140x140" src="src/1.jpg">	
+	        		<p><%= @second.name %></p>
+	        	<% end %>
+	        </div>
+	        <div class="span2">
+	        </div>
+		<% elsif @match == 8 %>
+			<h1>16강</h1>
+			<div class="span2">
+	        </div>
+	        <div class="span4">
+	        	<%= link_to select8_path(select: @first, unselect: @second) do %>
+	        		<img alt="140x140" src="src/1.jpg">	
+	        		<p><%= @first.name %></p>
+	        	<% end %>
+	        </div>
+	        <div class="span4">
+	            <%= link_to select8_path(select: @second, unselect: @first) do %>
+	        		<img alt="140x140" src="src/1.jpg">	
+	        		<p><%= @second.name %></p>
+	        	<% end %>
+	        </div>
+	        <div class="span2">
+	        </div>
+		<% elsif @match == 4 %>
+			<h1>8강</h1>
+			<div class="span2">
+	        </div>
+	        <div class="span4">
+	        	<%= link_to select4_path(select: @first, unselect: @second) do %>
+	        		<img alt="140x140" src="src/1.jpg">	
+	        		<p><%= @first.name %></p>
+	        	<% end %>
+	        </div>
+	        <div class="span4">
+	            <%= link_to select4_path(select: @second, unselect: @first) do %>
+	        		<img alt="140x140" src="src/1.jpg">	
+	        		<p><%= @second.name %></p>
+	        	<% end %>
+	        </div>
+	        <div class="span2">
+	        </div>
+		<% elsif @match == 2 %>
+			<h1>4강</h1>
+			<div class="span2">
+	        </div>
+	        <div class="span4">
+	        	<%= link_to select2_path(select: @first, unselect: @second) do %>
+	        		<img alt="140x140" src="src/1.jpg">	
+	        		<p><%= @first.name %></p>
+	        	<% end %>
+	        </div>
+	        <div class="span4">
+	            <%= link_to select2_path(select: @second, unselect: @first) do %>
+	        		<img alt="140x140" src="src/1.jpg">	
+	        		<p><%= @second.name %></p>
+	        	<% end %>
+	        </div>
+	        <div class="span2">
+	        </div>
+		<% elsif @match == 1 %>
+			<h1>World Final</h1>
+			<div class="span2">
+	        </div>
+	        <div class="span4">
+	        	<%= link_to select1_path(select: @first, unselect: @second) do %>
+	        		<img alt="140x140" src="src/1.jpg">	
+	        		<p><%= @first.name %></p>
+	        	<% end %>
+	        </div>
+	        <div class="span4">
+	            <%= link_to select1_path(select: @second, unselect: @first) do %>
+	        		<img alt="140x140" src="src/1.jpg">	
+	        		<p><%= @second.name %></p>
+	        	<% end %>
+	        </div>
+	        <div class="span2">
+	        </div>
+		<% end %>
+    </div>
+    </div>
+  </div> <!-- container -->
+</div> 
+

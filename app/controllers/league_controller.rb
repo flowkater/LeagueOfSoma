@@ -1,5 +1,7 @@
 class LeagueController < ApplicationController
   def main
+    @subject = Subject.last
+
   	$this_16_members ||= []
   	$this_8_members ||= []
   	$this_4_members ||= []
@@ -7,28 +9,31 @@ class LeagueController < ApplicationController
   	$this_final_members ||= []
   	$last ||= nil
   	@match = 0
- 
- 	if $this_16_members.length > 0
- 		@first = $this_16_members.first
- 	 	@second = $this_16_members.second
- 		@match = 16
- 	elsif $this_8_members.length > 0
- 		@first = $this_8_members.first
- 	 	@second = $this_8_members.second
- 		@match = 8
- 	elsif $this_4_members.length > 0
- 		@first = $this_4_members.first
- 	 	@second = $this_4_members.second
- 		@match = 4
- 	elsif $this_2_members.length > 0
- 		@first = $this_2_members.first
- 	 	@second = $this_2_members.second
- 		@match = 2
- 	elsif $this_final_members.length > 0
- 		@first = $this_final_members.first
- 	 	@second = $this_final_members.second
- 		@match = 1
- 	end
+  end
+
+  def root
+    @subject = Subject.last
+    if $this_16_members.length > 0
+      @first = $this_16_members.first
+      @second = $this_16_members.second
+      @match = 16
+    elsif $this_8_members.length > 0
+      @first = $this_8_members.first
+      @second = $this_8_members.second
+      @match = 8
+    elsif $this_4_members.length > 0
+      @first = $this_4_members.first
+      @second = $this_4_members.second
+      @match = 4
+    elsif $this_2_members.length > 0
+      @first = $this_2_members.first
+      @second = $this_2_members.second
+      @match = 2
+    elsif $this_final_members.length > 0
+      @first = $this_final_members.first
+      @second = $this_final_members.second
+      @match = 1
+    end
   end
 
   def select16
@@ -38,7 +43,7 @@ class LeagueController < ApplicationController
   	$this_16_members.delete_if{|m| m.id == @select.id || m.id == @unselect.id}
 
   	$this_8_members << @select
-  	redirect_to root_url
+  	redirect_to root_start_path
   end
 
   def select8
@@ -48,7 +53,7 @@ class LeagueController < ApplicationController
   	$this_8_members.delete_if{|m| m.id == @select.id || m.id == @unselect.id}
 
   	$this_4_members << @select
-  	redirect_to root_url
+  	redirect_to root_start_path
   end
 
   def select4
@@ -58,7 +63,7 @@ class LeagueController < ApplicationController
   	$this_4_members.delete_if{|m| m.id == @select.id || m.id == @unselect.id}
 
   	$this_2_members << @select
-  	redirect_to root_url
+  	redirect_to root_start_path
   end
 
   def select2
@@ -68,7 +73,7 @@ class LeagueController < ApplicationController
   	$this_2_members.delete_if{|m| m.id == @select.id || m.id == @unselect.id}
 
   	$this_final_members << @select
-  	redirect_to root_url
+  	redirect_to root_start_path
   end
 
   def select1
@@ -96,10 +101,14 @@ class LeagueController < ApplicationController
 
   def start
   	$this_16_members = Member.load_thirtytwo
-  	redirect_to root_url
+  	redirect_to root_start_path
   end
 
   def rank
-  	
+  	@subject = Subject.last
+  end
+
+  def about
+    
   end
 end
