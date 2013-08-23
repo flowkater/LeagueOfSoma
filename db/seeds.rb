@@ -5,3 +5,7 @@
 #
 #   cities = City.create([{ name: 'Chicago' }, { name: 'Copenhagen' }])
 #   Mayor.create(name: 'Emanuel', city: cities.first)
+
+(1..100).each{|i| Member.create(name: i.to_s)}
+
+Subject.create(name: "asdasd?",total_count: 0)

@@ -4,11 +4,12 @@ class Member < ActiveRecord::Base
   has_many :selections
   has_many :subjects, through: :selections
 
-  def load_sixtyfour(members)
-  	result = []
-	members.each do |m|
-		break if result.length == 64
-		
-	end  	
+  def self.load_thirtytwo
+  	ids = []
+  	(1..all.length).to_a.shuffle.each do |id|
+  		break if ids.length == 32
+  		ids << id
+  	end
+  	find(ids).shuffle
   end
 end

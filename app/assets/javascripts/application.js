@@ -12,4 +12,7 @@
 //
 //= require jquery
 //= require jquery_ujs
-//= require_tree .
+//= require lib/underscore
+//= require lib/backbone
+//= require lib/app
+

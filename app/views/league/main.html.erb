@@ -1,2 +1,33 @@
-<h1>League#main</h1>
-<p>Find me in app/views/league/main.html.erb</p>
+<p><%= $this_16_members.length %>---------</p>
+<%= $this_16_members %>
+<p><%= $this_8_members.length %>----------</p>
+<%= $this_8_members %>
+<p><%= $this_4_members.length %>----------</p>
+<%= $this_4_members %>
+<p><%= $this_2_members.length %>----------</p>
+<%= $this_2_members %>
+<p><%= $this_final_members.length %>----------</p>
+<%= $this_final_members %>
+<br>
+
+<% if @match == 16 %>
+	<%= link_to @first.name, select16_path(select: @first, unselect: @second) %>
+	<%= link_to @second.name, select16_path(select: @second, unselect: @first) %>
+<% elsif @match == 8 %>
+	<%= link_to @first.name, select8_path(select: @first, unselect: @second) %>
+	<%= link_to @second.name, select8_path(select: @second, unselect: @first) %>
+<% elsif @match == 4 %>
+	<%= link_to @first.name, select4_path(select: @first, unselect: @second) %>
+	<%= link_to @second.name, select4_path(select: @second, unselect: @first) %>
+<% elsif @match == 2 %>
+	<%= link_to @first.name, select2_path(select: @first, unselect: @second) %>
+	<%= link_to @second.name, select2_path(select: @second, unselect: @first) %>
+<% elsif @match == 1 %>
+	<%= link_to @first.name, select1_path(select: @first, unselect: @second) %>
+	<%= link_to @second.name, select1_path(select: @second, unselect: @first) %>	
+<% end %>
+
+<% if @match == 0 %>
+	<p><%= button_to "시작해요!", start_path, method: :post %></p>
+<% end %>
+
