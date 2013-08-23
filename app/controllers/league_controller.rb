@@ -106,9 +106,15 @@ class LeagueController < ApplicationController
 
   def rank
   	@subject = Subject.last
+    @rank_hash = Selection.rank
+    @rank_arr = []
+    (0..2).each {@rank_arr << @rank_hash.shift }
+
+    @first_member = Member.find(@rank_arr[0].first)
+    @second_member = Member.find(@rank_arr[1].first)
+    @third_member = Member.find(@rank_arr[2].first)
   end
 
   def about
-    
   end
 end

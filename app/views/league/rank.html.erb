@@ -8,6 +8,7 @@
                 <h1>
                     <%= @subject.name %> <small>League of Soma</small>
                 </h1>
+                <h2>현재 랭킹</h2>
             </div>
         </div>
     </div>
@@ -16,7 +17,8 @@
         </div>
         <div class="span6">
             <p>1등!</p>
-            <img alt="140x140" src="src/main.jpg">
+            <%= image_tag @first_member.photo, class: "profile-image" %>
+            <h2 class="center-hard"><%= @first_member.name %></h2>
         </div>
         <div class="span2">
         </div>
@@ -27,7 +29,8 @@
         </div>
         <div class="span6">
             <p>2등!</p>
-            <img alt="140x140" src="src/main.jpg">
+            <%= image_tag @second_member.photo, class: "profile-image" %>
+            <h2 class="center-hard"><%= @second_member.name %></h2>
         </div>
         <div class="span2">
         </div>
@@ -37,7 +40,8 @@
         </div>
         <div class="span6">
             <p>3등!</p>
-            <img alt="140x140" src="src/main.jpg">
+            <%= image_tag @third_member.photo, class: "profile-image" %>
+            <h2 class="center-hard"><%= @third_member.name %></h2>
         </div>
         <div class="span2">
         </div>
@@ -45,3 +49,20 @@
     </div>
   </div> <!-- /container -->
 </div> <!-- /wrap -->
+
+<br>
+<br>
+<br><br>
+<br>
+<br><br>
+<br>
+<br><br>
+<br>
+<br><br>
+<br>
+<br><br>
+<br>
+<br><br>
+<br>
+<br>
+

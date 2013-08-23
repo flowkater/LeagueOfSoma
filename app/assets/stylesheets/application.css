@@ -25,10 +25,6 @@ body {
 	margin-top:60px;
 }
 
-img {
-    width:150px;
-}
-
 /* Wrapper for page content to push down footer */
 #wrap {
   min-height: 100%;
@@ -55,4 +51,20 @@ img {
   padding-left: 20px;
   padding-right: 20px;
 }
+}
+
+
+img.profile-image {
+    width: 250px;
+} 
+
+
+
+.start-btn{
+  margin-top: 100px;
+  margin-left: 350px; 
+}
+
+.center-hard{
+  margin-left: 115px;
 }
